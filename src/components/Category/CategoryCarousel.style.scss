@@ -1,0 +1,11 @@
+.carousel {
+  .carousel-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+  }
+  .carousel-items {
+    display: flex;
+    gap: 1rem;
+  }
+}

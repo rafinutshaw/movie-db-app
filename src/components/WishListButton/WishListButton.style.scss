@@ -1,0 +1,29 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn.btn-popular {
+  background: var(--color-popular);
+  color: var(--color-btn-text);
+}
+.btn.btn-top_rated {
+  background: var(--color-top_rated);
+  color: var(--color-title);
+}
+.btn.btn-upcoming {
+  background: var(--color-upcoming);
+  color: var(--color-title);
+}
+
+.wishbutton-skeleton {
+  width: 68px;
+  height: 42px;
+  border-radius: 6px;
+}

@@ -1,0 +1,29 @@
+.cast-container {
+  .cast-header {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  .cast-list {
+    display: flex;
+    flex-wrap: wrap;
+    .actor {
+      flex: 50%;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1rem;
+      .actor-image {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+      }
+      .actor-character {
+        margin-top: 0.5rem;
+        font-size: 0.75rem;
+        color: var(--color-text-gray);
+      }
+    }
+  }
+}

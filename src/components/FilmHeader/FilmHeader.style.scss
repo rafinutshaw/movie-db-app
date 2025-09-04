@@ -1,0 +1,21 @@
+.film-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  .film-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+    .film-subtitle {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+    }
+  }
+  .action-panel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+}

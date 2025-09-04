@@ -1,0 +1,27 @@
+.navbar {
+  background: var(--color-navbar-bg);
+  margin-bottom: 2rem;
+  .content {
+    display: flex;
+    gap: 2rem;
+
+    padding: 2rem 2rem;
+    align-items: center;
+    border-radius: 0 0 12px 12px;
+    .nav-left {
+      flex: 1;
+    }
+    a {
+      color: var(--color-navbar-link);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.2s;
+      &:hover {
+        background: var(--color-btn-bg);
+        color: var(--color-btn-text);
+      }
+    }
+  }
+}

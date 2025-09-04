@@ -1,0 +1,18 @@
+.badge {
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  font-weight: bold;
+  color: white;
+}
+
+.badge-popular {
+  background-color: var(--color-popular);
+}
+
+.badge-top_rated {
+  background-color: var(--color-top_rated);
+}
+
+.badge-upcoming {
+  background-color: var(--color-upcoming);
+}

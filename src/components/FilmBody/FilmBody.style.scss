@@ -1,0 +1,15 @@
+.film-tagline {
+  font-style: italic;
+  color: var(--color-text);
+}
+.film-overview {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-top: 1rem;
+  .film-overview-title {
+    font-weight: bold;
+  }
+  .film-overview-content {
+    margin-top: 0.5rem;
+  }
+}

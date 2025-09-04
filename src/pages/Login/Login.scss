@@ -1,0 +1,14 @@
+.tmdb-auth-box {
+  text-align: center;
+
+  .btn-tmdb {
+    background: var(--color-btn-bg);
+    color: var(--color-btn-text);
+    display: inline;
+    .tmdb-logo {
+      width: 80px;
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+  }
+}
