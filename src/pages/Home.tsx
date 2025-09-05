@@ -1,21 +1,16 @@
 import CategoryCarousel from "../components/Category/CategoryCarousel";
+import PageContainer from "../components/PageContainer";
 
-const Home: React.FC<{}> = ({}) => {
+const Home: React.FC = () => {
   return (
-    <main className="homepage">
-      <article>
-        <title>Top movies - TMDB</title>
-        <meta name="description" content="Movie database website" />
-      </article>
-
-      <div className="container">
-        <CategoryCarousel category="popular" />
-
-        <CategoryCarousel category="top_rated" />
-
-        <CategoryCarousel category="upcoming" />
-      </div>
-    </main>
+    <PageContainer
+      title="Top movies - TMDB"
+      description="Movie database website"
+    >
+      <CategoryCarousel category="popular" />
+      <CategoryCarousel category="top_rated" />
+      <CategoryCarousel category="upcoming" />
+    </PageContainer>
   );
 };
 
