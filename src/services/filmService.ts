@@ -1,6 +1,6 @@
 import axios from "axios";
 import { BASE_URL } from "../../constants";
-import type { Film, FilmList, Cast } from "../types/film.type";
+import type { Film, Cast } from "../types/film.type";
 
 // Handles direct API calls to TMDB
 const ACCESS_TOKEN = import.meta.env.VITE_ACCESS_TOKEN;
