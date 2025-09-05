@@ -64,13 +64,6 @@ header,
 nav,
 section,
 main {
-  .container {
-    display: block;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    width: 100%;
-  }
   box-sizing: border-box;
 }
 
@@ -94,7 +87,13 @@ body {
     flex: 1;
   }
 }
-
+.container {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
 ol,
 ul {
   list-style: none;
