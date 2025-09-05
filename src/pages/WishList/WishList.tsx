@@ -24,20 +24,26 @@ const WishList: React.FC = () => {
             <Link to="/login">Login here</Link>
           </span>
         )}
-        {error && <p className="error">{error}</p>}
-        {loading && <WishListSkeleton />}
-        {items.length === 0 && isLoggedIn && <p>No films in your wish list.</p>}
-        {isLoggedIn && items.length > 0 && (
-          <div className="wishlist-items">
-            {items.map((film) => (
-              <FilmBox
-                key={film.id}
-                film={film}
-                showRemove={true}
-                onRemove={remove}
-              />
-            ))}
-          </div>
+        {isLoggedIn && (
+          <>
+            {error && <p className="error">{error}</p>}
+            {items.length === 0 && loading && <WishListSkeleton />}
+            {items.length === 0 && isLoggedIn && (
+              <p>No films in your wish list.</p>
+            )}
+            {isLoggedIn && items.length > 0 && (
+              <div className="wishlist-items">
+                {items.map((film) => (
+                  <FilmBox
+                    key={film.id}
+                    film={film}
+                    showRemove={true}
+                    onRemove={remove}
+                  />
+                ))}
+              </div>
+            )}
+          </>
         )}
       </div>
     </main>

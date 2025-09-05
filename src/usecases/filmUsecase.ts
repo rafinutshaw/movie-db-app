@@ -12,7 +12,7 @@ export async function fetchFilmsByCategory<T>(
 ): Promise<{ films: T | null; error: string | null }> {
   try {
     const data = await getFilms(category);
-    const result = schema.parse(data.data.results);
+    const result = schema.parse(data.results);
 
     return { films: result, error: null };
   } catch (error: any) {
@@ -29,7 +29,7 @@ export async function fetchFilmDetailUsecase<T>(
 ): Promise<{ film: T | null; error: string | null }> {
   try {
     const data = await getFilmDetail(id);
-    const result = schema.parse(data.data);
+    const result = schema.parse(data);
 
     return { film: result, error: null };
   } catch (err: any) {
@@ -46,7 +46,7 @@ export async function fetchCastUsecase<T>(
 ): Promise<{ cast: T | null; error: string | null }> {
   try {
     const data = await getCast(id);
-    const result = schema.parse(data.data.cast);
+    const result = schema.parse(data.cast);
 
     return { cast: result, error: null };
   } catch (err: any) {
