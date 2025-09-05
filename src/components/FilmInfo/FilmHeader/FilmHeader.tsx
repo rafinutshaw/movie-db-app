@@ -1,8 +1,8 @@
-import { WishListButton } from "../WishListButton/WishListButton";
-import Badge from "../Badge/Badge";
+import { WishListButton } from "../../WishListButton/WishListButton";
+import Badge from "../../Badge/Badge";
 import "./FilmHeader.style.scss";
-import type { Film } from "../../types/film.type";
-import type { FilmCategoryKeys } from "../../../constants";
+import type { Film } from "../../../types/film.type";
+import type { FilmCategoryKeys } from "../../../../constants";
 
 const FilmHeader = ({ film }: { film: Film }) => {
   const category = new URLSearchParams(window.location.search).get("category");

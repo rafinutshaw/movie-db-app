@@ -1,5 +1,5 @@
-import type { Film } from "../../types/film.type";
-import Rating from "../Rating/Rating";
+import type { Film } from "../../../types/film.type";
+import Rating from "../../Rating/Rating";
 import "./FilmBody.style.scss";
 const FilmBody = ({ film }: { film: Film }) => {
   return (

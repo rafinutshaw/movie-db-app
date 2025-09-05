@@ -1,35 +1,3 @@
-.film-detail {
-  .film-info {
-    padding: 1rem;
-    display: flex;
-    border: 2px solid var(--color-uncategorized);
-
-    .film-poster {
-      width: 300px;
-      img {
-        border-radius: 8px;
-        margin-bottom: 1rem;
-        max-width: 100%;
-        height: auto;
-      }
-    }
-    .right-panel {
-      margin-left: 2rem;
-      flex: 1;
-    }
-  }
-
-  .film-info.popular {
-    border: 2px solid var(--color-popular);
-  }
-  .film-info.top_rated {
-    border: 2px solid var(--color-top_rated);
-  }
-  .film-info.upcoming {
-    border: 2px solid var(--color-upcoming);
-  }
-}
-
 .film-detail.popular {
   font-family: "Arial, sans-serif";
 }

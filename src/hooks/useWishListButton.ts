@@ -13,8 +13,9 @@ export function useWishListButton(film: WishListFilm) {
   const { isLoggedIn } = useAuthStore();
   const [loading, setLoading] = useState<boolean>(isLoggedIn ? true : false);
 
-  const [isWished, setIsWished] = useState<boolean>(false);
-
+  const [isWished, setIsWished] = useState<boolean>(
+    items.findIndex((item) => item.id === film.id) >= 0
+  );
   useEffect(() => {
     if (!isLoggedIn) return;
     setLoading(true);

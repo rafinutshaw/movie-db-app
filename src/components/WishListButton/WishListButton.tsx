@@ -9,9 +9,8 @@ export const WishListButton: React.FC<{
   film: WishListFilm;
   category?: FilmCategoryKeys;
 }> = ({ film, category }) => {
-  const { isWished, updateWish, loading } = useWishListButton(film);
-
-  if (loading) return <div className="skeleton wishbutton-skeleton" />;
+  const { isWished, updateWish } = useWishListButton(film);
+  if (!film.id) return null;
 
   return (
     <>

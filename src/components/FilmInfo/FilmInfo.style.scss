@@ -1,0 +1,32 @@
+.film-info {
+  padding: 1rem;
+  display: flex;
+  border: 2px solid var(--color-uncategorized);
+  flex-wrap: wrap;
+  gap: 1rem;
+  .film-poster {
+    width: 300px;
+    height: 450px;
+    img {
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .right-panel {
+    flex: 1;
+    min-width: 100px;
+    min-height: 200px;
+  }
+}
+
+.film-info.popular {
+  border: 2px solid var(--color-popular);
+}
+.film-info.top_rated {
+  border: 2px solid var(--color-top_rated);
+}
+.film-info.upcoming {
+  border: 2px solid var(--color-upcoming);
+}
