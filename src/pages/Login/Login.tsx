@@ -8,6 +8,10 @@ const Login: React.FC = () => {
 
   return (
     <main className="tmdb-auth">
+      <article>
+        <title>Login</title>
+        <meta name="description" content="Movie database website" />
+      </article>
       <div className="container tmdb-auth-box">
         <h2 className="tmdb-title page-title">Login</h2>
         {error && <div className="tmdb-error">{error}</div>}

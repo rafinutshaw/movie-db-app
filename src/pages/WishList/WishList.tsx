@@ -12,6 +12,10 @@ const WishList: React.FC = () => {
 
   return (
     <main className="wishlist">
+      <article>
+        <title>Wishlist - TMDB</title>
+        <meta name="description" content="Movie database website" />
+      </article>
       <div className="container">
         <h2 className="page-title">My Wishlist</h2>
         {!isLoggedIn && (
