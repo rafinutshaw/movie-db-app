@@ -126,33 +126,65 @@ public/
   - Reusable UI patterns (e.g., carousels, skeletons, containers) are implemented as components.
   - No code duplication between pages or features.
 
-- **Testing:**
+## Code Quality & Architecture
 
-  - Unit and integration tests are written for all major pages, usecases, and components.
-  - Tests cover skeleton loading, data rendering, error states, and authentication flows.
-  - Mocking is used for API calls and authentication to ensure isolation.
-  - See `src/__tests__/` for examples.
+### Single Responsibility Principle (SRP)
 
-- **SSR (Server-Side Rendering):**
-  - This project is currently a client-side rendered SPA (Single Page Application) and does **not** implement SSR.
-  - All SEO optimizations (titles, meta tags, robots.txt) are handled on the client side.
-  - The architecture is compatible with SSR frameworks (e.g., Next.js) if future migration is desired.
+Every component, hook, and function in this project is designed to do one thing and do it well. UI components only handle rendering, hooks only handle data fetching or state logic, and usecases only orchestrate business logic. This makes the codebase easier to test, debug, and extend.
 
----
+### Compound Components
 
-## TMDB Third-Party Login
+Reusable UI patterns are built using the compound component pattern. For example, the `CategoryCarousel` and `FilmBox` components are composed of smaller, focused subcomponents. This allows for flexible composition and customization, letting parent components control layout and children while keeping each piece simple and reusable.
 
-- Users can log in securely with their TMDB account to manage their wish list.
-- OAuth flow is handled via TMDB's official API and redirect.
-- No passwords are stored; only session tokens are used.
+### Presentation and Logic Layer Separation
 
----
+The codebase separates presentation (UI) from logic (data fetching, state, business rules):
 
-## Lighthouse Results
+- **Presentation Layer:** Components in `src/components/` and `src/pages/` are responsible only for rendering UI and receiving data via props.
+- **Logic Layer:** Custom hooks in `src/hooks/` handle data fetching, state, and side effects. They are reused across multiple components and pages.
 
-- **Performance:** 99
-- **Accessibility:** 100
-- **Best Practices:** 100
-- **SEO:** 99
+### Usecase Layer
 
----
+The `src/usecases/` directory contains usecase files that encapsulate business logic and coordinate between services, hooks, and state. This layer acts as the "controller" for complex flows, ensuring that UI components remain simple and focused on rendering. Usecases make it easy to test business logic in isolation and adapt the app to new requirements without rewriting UI code.
+
+### Clean, Reusable Code
+
+- All components are written in TypeScript with clear, explicit props and return types.
+- Logic is separated into custom hooks and usecase files, making code easy to test and reuse.
+- Compound and higher-order components (e.g., `PageContainer`) promote DRY and composability.
+
+### Component Structure
+
+- Components are organized by domain and responsibility (e.g., `components/`, `pages/`, `hooks/`, `usecases/`).
+- Each component is focused and follows the single responsibility principle.
+- Presentation and logic are separated for maintainability.
+
+### Layout Complexity
+
+- The app features a multi-section homepage with carousels, dynamic detail pages, and authentication flows.
+- Responsive layouts and skeleton loaders are used for a polished user experience.
+
+### CSS/SCSS Organization
+
+- All styles are written in modular SCSS, using variables and mixins for consistency.
+- Styles are colocated with components for clarity and maintainability.
+- The final CSS is clean, minimal, and follows BEM-like naming for order and predictability.
+
+### DRY Principles
+
+- Shared logic is abstracted into hooks and usecases.
+- Reusable UI patterns (e.g., carousels, skeletons, containers) are implemented as components.
+- No code duplication between pages or features.
+
+### Testing
+
+- Unit and integration tests are written for all major pages, usecases, and components.
+- Tests cover skeleton loading, data rendering, error states, and authentication flows.
+- Mocking is used for API calls and authentication to ensure isolation.
+- See `src/__tests__/` for examples.
+
+### SSR (Server-Side Rendering)
+
+- This project is currently a client-side rendered SPA (Single Page Application) and does **not** implement SSR by default.
+- All SEO optimizations (titles, meta tags, robots.txt) are handled on the client side.
+- The architecture is compatible with SSR frameworks (e.g., Next.js) if future migration is desired.
