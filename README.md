@@ -8,6 +8,34 @@ A modern, high-performance web application for browsing, searching, and managing
 
 ---
 
+## Technologies Used
+
+- **React** (with hooks and functional components)
+- **TypeScript** (type safety and maintainability)
+- **Vite** (fast build and dev server)
+- **SCSS** (modular, maintainable styles)
+- **React Router** (client-side routing)
+- **Zustand** (state management)
+- **Axios** (API requests)
+- **Jest & React Testing Library** (unit and integration testing)
+- **Express** (SSR server)
+- **Docker** (containerization and deployment)
+
+---
+
+## Lighthouse Results
+
+| Category       | Score |
+| -------------- | ----- |
+| Performance    | 99    |
+| Accessibility  | 100   |
+| Best Practices | 100   |
+| SEO            | 99    |
+
+These scores reflect a highly optimized, accessible, and SEO-friendly web application.
+
+---
+
 ## Features
 
 - Browse movies by category (Popular, Top Rated, Upcoming)
@@ -94,37 +122,6 @@ public/
 ---
 
 ## Design Principles
-
-## Code Quality & Architecture
-
-- **Clean, Reusable Code:**
-
-  - All components are written in TypeScript with clear, explicit props and return types.
-  - Logic is separated into custom hooks and usecase files, making code easy to test and reuse.
-  - Compound and higher-order components (e.g., `PageContainer`) promote DRY and composability.
-
-- **Component Structure:**
-
-  - Components are organized by domain and responsibility (e.g., `components/`, `pages/`, `hooks/`, `usecases/`).
-  - Each component is focused and follows the single responsibility principle.
-  - Presentation and logic are separated for maintainability.
-
-- **Layout Complexity:**
-
-  - The app features a multi-section homepage with carousels, dynamic detail pages, and authentication flows.
-  - Responsive layouts and skeleton loaders are used for a polished user experience.
-
-- **CSS/SCSS Organization:**
-
-  - All styles are written in modular SCSS, using variables and mixins for consistency.
-  - Styles are colocated with components for clarity and maintainability.
-  - The final CSS is clean, minimal, and follows BEM-like naming for order and predictability.
-
-- **DRY Principles:**
-
-  - Shared logic is abstracted into hooks and usecases.
-  - Reusable UI patterns (e.g., carousels, skeletons, containers) are implemented as components.
-  - No code duplication between pages or features.
 
 ## Code Quality & Architecture
 
