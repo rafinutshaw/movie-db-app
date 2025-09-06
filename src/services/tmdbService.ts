@@ -2,7 +2,7 @@
 
 import { BASE_URL } from "../../constants";
 
-const API_KEY = import.meta.env.VITE_API_KEY;
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
 export async function fetchFilms(
   category: "popular" | "top_rated" | "upcoming"

@@ -3,7 +3,7 @@ import { BASE_URL } from "../../constants";
 import type { Film, Cast } from "../types/film.type";
 
 // Handles direct API calls to TMDB
-const ACCESS_TOKEN = import.meta.env.VITE_ACCESS_TOKEN;
+const ACCESS_TOKEN = import.meta.env.VITE_TMDB_ACCESS_TOKEN;
 const axiosTMDB = axios.create({
   baseURL: BASE_URL,
   headers: {
