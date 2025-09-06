@@ -180,8 +180,25 @@ The `src/usecases/` directory contains usecase files that encapsulate business l
 - Mocking is used for API calls and authentication to ensure isolation.
 - See `src/__tests__/` for examples.
 
-### SSR (Server-Side Rendering)
+---
 
-- This project is currently a client-side rendered SPA (Single Page Application) and does **not** implement SSR by default.
-- All SEO optimizations (titles, meta tags, robots.txt) are handled on the client side.
-- The architecture is compatible with SSR frameworks (e.g., Next.js) if future migration is desired.
+## Future Improvements
+
+- **Server-Side Rendering (SSR):**
+
+  - Integrate full SSR (using Vite SSR, Next.js, or similar) for improved SEO, faster first paint, and better social sharing support. This will allow the app to serve pre-rendered HTML for each route, making it even more search engine friendly and performant.
+
+- **End-to-End (E2E) Testing:**
+
+  - Implement E2E tests (using Cypress, Playwright, or similar) for critical user flows, especially the wishlist feature. This will ensure that adding/removing films, authentication, and error handling work as expected in real browsers and environments.
+
+- **Progressive Web App (PWA) Support:**
+
+  - Add service workers and manifest for offline support and installability.
+
+- **Internationalization (i18n):**
+
+  - Support multiple languages for a broader audience.
+
+- **Accessibility Audits:**
+  - Continue improving accessibility with regular audits and user feedback.
